@@ -20,7 +20,10 @@ export async function getStaticProps({ params }) {
     slug: params.slug,
   });
 
+  if (!recipe) return { notFound: true };
+
   return {
+    revalidate: 300,
     props: {
       recipe,
     },
