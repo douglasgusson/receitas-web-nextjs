@@ -34,16 +34,16 @@ function Receita({ recipe }) {
   return (
     <>
       <Head>
-        <title>{recipe.name} | ReceitasWeb</title>
+        <title>{recipe?.name} | ReceitasWeb</title>
       </Head>
-      <HeroSection title={recipe.name} subtitle={recipe.description} />
+      <HeroSection title={recipe?.name} subtitle={recipe?.description} />
       <Box
         py={4}
-        dangerouslySetInnerHTML={{ __html: recipe.ingredients.html }}
+        dangerouslySetInnerHTML={{ __html: recipe?.ingredients.html }}
       />
       <Box
         py={4}
-        dangerouslySetInnerHTML={{ __html: recipe.preparation.html }}
+        dangerouslySetInnerHTML={{ __html: recipe?.preparation.html }}
       />
     </>
   );
